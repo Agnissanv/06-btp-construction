@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demande de devis et estimation de budget · Bâti Horizon</title>
+<meta name="description" content="Estimez le budget de votre projet de construction ou de rénovation à Abidjan (fourchette indicative en FCFA), puis demandez un devis détaillé en trois étapes.">
+<meta name="theme-color" content="#2E3237">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/barlow-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="devis">
+<a class="skip" href="#contenu">Aller au contenu</a>
+<div class="topbar"><div class="wrap"><span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.500 7-12a7 7 0 0 0-14 0c0 5.500 7 12 7 12z"/><circle cx="12" cy="10" r="2.500"/></svg>Riviera Palmeraie, Cocody, Abidjan</span><span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>contact@bati-horizon.example</span><span><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lun – Sam : 8 h – 18 h</span></div></div>
+<header class="site-header"><div class="header-in">
+<a class="brand" href="index.html" aria-label="Bâti Horizon, accueil"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24L24 8l18 16" fill="none" stroke="#E8631A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 22v18h26V22" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M17 40V30h14v10M17 34h14" fill="none" stroke="#E8631A" stroke-width="3"/></svg><span><b>Bâti Horizon</b><small>Construction &amp; rénovation</small></span></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu"><svg class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+<nav class="nav" id="nav" aria-label="Navigation principale"><ul><li><a href="index.html">Accueil</a></li><li><a href="entreprise.html">L’entreprise</a></li><li><a href="services.html">Services</a></li><li><a href="realisations.html">Réalisations</a></li><li><a href="devis.html" aria-current="page">Devis</a></li></ul><a class="btn sm" href="devis.html">Demander un devis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></nav>
+</div></header>
+<main id="contenu">
+
+<div class="page-title"><div class="wrap"><span class="tag">Devis</span><h1>Estimez, puis demandez votre devis.</h1><p>L’estimateur donne une fourchette indicative en quelques secondes. Le devis détaillé, lui, est établi après visite du terrain.</p></div></div>
+<section><div class="wrap quoteg">
+<div class="card" id="estimateur"><h2>Estimateur de budget</h2>
+<div class="field"><label class="f" for="e-type">Type de projet</label><select id="e-type" style="width:100%"><option value="villa">Villa</option><option value="immeuble">Immeuble</option><option value="renovation">Rénovation</option><option value="commercial">Commercial</option></select></div>
+<div class="row2"><div class="field"><label class="f" for="e-m2">Surface (m²)</label><input id="e-m2" type="number" min="20" max="20000" step="10" value="200"></div>
+<div class="field"><label class="f" for="e-fin">Niveau de finition</label><select id="e-fin" style="width:100%"><option value="std">Standard</option><option value="conf">Confort</option><option value="prem">Premium</option></select></div></div>
+<div class="range" aria-live="polite"><span class="k">Fourchette indicative</span><p class="big" id="e-out">—</p><div class="ln"><span>Prix au m²</span><span id="e-pm">—</span></div><div class="ln"><span>Durée estimée</span><span id="e-dur">—</span></div><p><strong>Estimation non contractuelle.</strong> Elle ne remplace pas un devis : le coût réel dépend du terrain, des études et des choix de matériaux.</p></div>
+<p style="margin:18px 0 0"><button type="button" class="btn sm line" id="e-use">Utiliser pour ma demande de devis</button></p></div>
+<form class="card" id="quote" novalidate aria-label="Demande de devis"><h2>Demande de devis</h2>
+<ol class="progress" aria-label="Progression"><li data-n="1" class="on">Projet</li><li data-n="2">Budget et délai</li><li data-n="3">Coordonnées</li></ol>
+<div class="step on" id="s1"><h3 tabindex="-1" style="margin-bottom:14px">Votre projet</h3>
+<div class="field"><label class="f" for="q-type">Type de projet</label><select id="q-type" style="width:100%"><option value="villa">Villa</option><option value="immeuble">Immeuble</option><option value="renovation">Rénovation</option><option value="commercial">Commercial</option></select></div>
+<fieldset style="border:0;padding:0;margin:0 0 18px"><legend>Avez-vous un terrain ?</legend><label style="margin-right:18px"><input type="radio" name="terrain" value="oui" checked> Oui</label><label style="margin-right:18px"><input type="radio" name="terrain" value="non"> Non</label><label><input type="radio" name="terrain" value="cours"> En cours d’acquisition</label></fieldset>
+<div class="row2"><div class="field"><label class="f" for="q-m2">Surface estimée (m²)</label><input id="q-m2" type="number" min="20" step="10" value="200" required><p class="err" data-err-for="q-m2">Indiquez une surface.</p></div>
+<div class="field"><label class="f" for="q-fin">Finition</label><select id="q-fin" style="width:100%"><option value="std">Standard</option><option value="conf">Confort</option><option value="prem">Premium</option></select></div></div>
+<div class="nav-btns"><span></span><button type="button" class="btn" data-next>Continuer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
+<div class="step" id="s2"><h3 tabindex="-1" style="margin-bottom:14px">Budget et délai</h3>
+<div class="field"><label class="f" for="q-bud">Budget envisagé</label><select id="q-bud" style="width:100%"><option>Moins de 50 millions FCFA</option><option>50 à 100 millions FCFA</option><option>100 à 200 millions FCFA</option><option>200 à 500 millions FCFA</option><option>Plus de 500 millions FCFA</option><option selected>Je ne sais pas encore</option></select></div>
+<div class="field"><label class="f" for="q-del">Délai souhaité</label><select id="q-del" style="width:100%"><option>Dès que possible</option><option selected>Dans les 3 à 6 mois</option><option>Dans les 6 à 12 mois</option><option>Dans plus d’un an</option></select></div>
+<div class="nav-btns"><button type="button" class="btn line" data-prev>Retour</button><button type="button" class="btn" data-next>Continuer <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></div>
+<div class="step" id="s3"><h3 tabindex="-1" style="margin-bottom:14px">Vos coordonnées</h3>
+<div class="row2"><div class="field"><label class="f" for="q-nom">Nom et prénom</label><input id="q-nom" type="text" autocomplete="name" required><p class="err" data-err-for="q-nom">Indiquez votre nom.</p></div>
+<div class="field"><label class="f" for="q-tel">Téléphone</label><input id="q-tel" type="tel" autocomplete="tel" placeholder="+225 07 00 00 00 00" required><p class="err" data-err-for="q-tel">Indiquez un numéro valide.</p></div></div>
+<div class="row2"><div class="field"><label class="f" for="q-com">Commune du projet</label><input id="q-com" type="text" required><p class="err" data-err-for="q-com">Indiquez la commune.</p></div><div class="field"><label class="f" for="q-mail">E-mail (facultatif)</label><input id="q-mail" type="email" autocomplete="email"></div></div>
+<div class="field"><label class="f" for="q-msg">Décrivez votre projet (facultatif)</label><textarea id="q-msg" rows="3"></textarea></div>
+<div class="check"><input id="q-ok" type="checkbox" required><label for="q-ok">J’accepte que Bâti Horizon utilise ces informations pour préparer mon devis, selon la <a href="confidentialite.html">politique de confidentialité</a>.</label></div><p class="err" data-err-for="q-ok">Le consentement est nécessaire.</p>
+<div class="nav-btns"><button type="button" class="btn line" data-prev>Retour</button><button type="submit" class="btn">Envoyer ma demande</button></div></div>
+<div class="ok" id="done" role="status"><p class="tag" style="justify-content:center">Demande reçue</p><p class="ref" id="d-ref"></p><p>Merci <strong id="d-name"></strong>. Un conducteur de travaux vous rappelle sous 48 heures pour convenir d’une visite du terrain.</p><p class="note">Démonstration : aucune donnée n’a été envoyée.</p></div>
+</form>
+</div></section>
+</main>
+<footer class="site-footer"><div class="foot">
+<div><a class="brand" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24L24 8l18 16" fill="none" stroke="#E8631A" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 22v18h26V22" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/><path d="M17 40V30h14v10M17 34h14" fill="none" stroke="#E8631A" stroke-width="3"/></svg><span><b>Bâti Horizon</b><small>Construction &amp; rénovation</small></span></a><p>Entreprise de construction et de rénovation à Abidjan : villas, immeubles, rénovation et aménagement.</p></div>
+<div><h2>Navigation</h2><a href="index.html">Accueil</a><a href="entreprise.html">L’entreprise</a><a href="services.html">Services</a><a href="realisations.html">Réalisations</a><a href="devis.html">Demande de devis</a></div>
+<div><h2>Services</h2><a href="services.html">Construction neuve</a><a href="services.html">Rénovation</a><a href="services.html">Gros œuvre</a><a href="services.html">Aménagement</a><a href="services.html">Études et plans</a></div>
+<div><h2>Contact</h2><a href="tel:+22527215500000">+225 27 21 55 00 00</a><a href="https://wa.me/2250700000000" rel="noopener">WhatsApp</a><a href="mailto:contact@bati-horizon.example">contact@bati-horizon.example</a><a href="entreprise.html#contact">Nous écrire</a></div>
+</div>
+<div class="legal"><span>© 2026 Bâti Horizon. Site de démonstration : entreprise, projets et chiffres fictifs. <a href="confidentialite.html" style="display:inline">Confidentialité et crédits photos</a></span><span class="signature">Site créé par <a href="https://agnissanisaac.com" rel="noopener">Code AZ</a> · agence web</span></div>
+</footer>
+<a class="wa" href="https://wa.me/2250700000000" rel="noopener" aria-label="Écrire à l’entreprise sur WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.800-1.200-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.500.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.6-.1l1.900.9c.3.1.5.2.5.3.1.2.1.8-.1 1.400z"/></svg><span>WhatsApp</span></a>
+<script src="js/data.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
